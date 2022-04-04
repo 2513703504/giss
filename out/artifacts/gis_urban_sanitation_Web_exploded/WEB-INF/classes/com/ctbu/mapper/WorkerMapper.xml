@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--mapper命名空间，必须配置属性，已存在Mapper接口的全类名-->
+<mapper namespace="com.ctbu.mapper.WorkerMapper">
+
+    <select id="getAllWorkers" resultMap="allWorkers">
+            select * from worker LEFT join company on worker.company_id=company.id
+    </select>
+
+    <select id="getWorkerByPage" resultMap="allWorkers">
+            select * from worker LEFT join company on worker.company_id=company.id
+    </select>
+
+    <select id="getWorkerByCondition" resultMap="allWorkers">
+       select * from (select w.id,w.w_id_number,w.w_name,w.w_address,w.w_age,c.c_name from worker w LEFT join company c on w.company_id=c.id) as temp
+       <where>
+           <if test="workerName!=null">
+               and temp.w_Name like concat("%",#{workerName},"%")
+           </if>
+           <if test="idNumber!=null">
+               and temp.w_id_Number like concat("%",#{idNumber},"%")
+           </if>
+           <if test="address!=null">
+               and temp.w_address like concat("%",#{address},"%")
+           </if>
+       </where>
+    </select>
+    <resultMap id="allWorkers" type="Worker" autoMapping="true">
+        <id property="id" column="id"></id>
+        <result property="workerName" column="w_name"></result>
+        <result property="idNumber" column="w_id_number"></result>
+        <result property="address" column="w_address"></result>
+        <result property="age" column="w_age"></result>
+        <association property="company" javaType="Company" autoMapping="true">
+            <id property="id" column="id"></id>
+            <result property="companyName" column="c_name"></result>
+            <result property="companyAddress" column="c_address"></result>
+            <result property="lng" column="lng"></result>
+            <result property="lat" column="lat"></result>
+        </association>
+    </resultMap>
+
+</mapper>

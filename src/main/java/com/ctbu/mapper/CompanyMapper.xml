@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--mapper命名空间，必须配置属性，已存在Mapper接口的全类名-->
+<mapper namespace="com.ctbu.mapper.CompanyMapper">
+    <!--显示所有环卫公司-->
+    <!--显示所有环卫公司-->
+    <select id="getAllCompany" resultMap="c1">
+        select * from company
+    </select>
+
+    <resultMap id="c1" type="Company" autoMapping="true">
+        <id property="id" column="id"></id>
+        <result property="companyName" column="c_name"></result>
+        <result property="companyAddress" column="c_address"></result>
+        <result property="lng" column="lng"></result>
+        <result property="lat" column="lat"></result>
+    </resultMap>
+
+    <select id="getCompanyByPage" resultMap="c1">
+        select * from company
+    </select>
+
+    <insert id="addCompany">
+        insert into company(c_name,c_address,lng,lat) values (#{companyName},#{companyAddress},#{lng},#{lat})
+    </insert>
+    <delete id="deleteCompany">
+        delete from company where id=#{id}
+    </delete>
+    <update id="updateCompany">
+        update company set c_name=#{companyName},c_address=#{companyAddress},lng=#{lng},lat=#{lat} where id=#{id}
+    </update>
+
+    <select id="getCompanyByCondition" resultMap="c1">
+        select * from company
+        <where>
+            <if test="companyName!=null">
+                and c_name like concat("%",#{companyName},"%")
+            </if>
+            <if test="companyAddress!=null">
+                and c_address like concat("%",#{companyAddress},"%")
+            </if>
+        </where>
+    </select>
+
+</mapper>

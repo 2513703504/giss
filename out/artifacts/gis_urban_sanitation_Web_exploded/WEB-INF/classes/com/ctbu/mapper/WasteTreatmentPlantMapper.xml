@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--mapper命名空间，必须配置属性，已存在Mapper接口的全类名-->
+<mapper namespace="com.ctbu.mapper.WasteTreatmentPlantMapper">
+    <!--登录查询-->
+    <select id="getAllWtp" resultMap="wtp">
+        select * from waste_treatment_plant
+    </select>
+
+    <select id="getWtpDetail" resultMap="wtpDetail">
+        select * from (select sc.id sc_id,sc.sc_number,wtp.id id,wtp.wtp_name,wtp.wtp_address,wtp.wtp_area,wtp.lng,wtp.lat from sanitation_car sc INNER JOIN waste_treatment_plant wtp on sc.wtp_id=wtp.id) as temp where  temp.id=#{id}
+    </select>
+    <resultMap id="wtp" type="WasteTreatmentPlant" autoMapping="true">
+        <id property="id" column="id"></id>
+        <result property="wtpName" column="wtp_name"></result>
+        <result property="wtpAddress" column="wtp_address"></result>
+        <result property="wtpArea" column="wtp_area"></result>
+        <result property="lng" column="lng"></result>
+        <result property="lat" column="lat"></result>
+    </resultMap>
+
+    <resultMap id="wtpDetail" type="WasteTreatmentPlant" autoMapping="true">
+        <id property="id" column="id"></id>
+        <result property="wtpName" column="wtp_name"></result>
+        <result property="wtpAddress" column="wtp_address"></result>
+        <result property="wtpArea" column="wtp_area"></result>
+        <result property="lng" column="lng"></result>
+        <result property="lat" column="lat"></result>
+        <collection property="cars" ofType="SanitationCar" autoMapping="true">
+            <result property="id" column="sc_id"></result>
+            <result property="scNumber" column="sc_number"></result>
+        </collection>
+    </resultMap>
+</mapper>

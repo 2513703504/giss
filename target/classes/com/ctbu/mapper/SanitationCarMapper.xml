@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--mapper命名空间，必须配置属性，已存在Mapper接口的全类名-->
+<mapper namespace="com.ctbu.mapper.SanitationCarMapper">
+    <!--显示所有环卫车辆-->
+    <select id="getAllSc" resultMap="getSc">
+       select * from sanitation_car sc left join sanitation_car_type sct on sc.sct_id=sct.id
+    </select>
+
+
+    <select id="getScByPage" resultMap="getSc">
+        SELECT temp.id,temp.sc_number,temp.sct_name,company.c_name FROM (select sc.id,sc.sc_number,sct.sct_name,sc.company_id from sanitation_car sc left join sanitation_car_type sct on sc.sct_id=sct.id) as temp LEFT JOIN company on temp.company_id=company.id
+    </select>
+
+    <select id="getScByCondition" resultMap="getSc">
+       select * from (select sc.id,sc.sc_number,sct.sct_name from sanitation_car sc left join sanitation_car_type sct on sc.sct_id=sct.id) as temp where temp.sct_name like concat("%",#{scType},"%")
+    </select>
+    <resultMap id="getSc" type="SanitationCar" autoMapping="true">
+        <id property="id" column="id"></id>
+        <result property="scNumber" column="sc_number"></result>
+        <result property="scType" column="sct_name"></result>
+        <association property="company" javaType="Company">
+            <result property="companyName" column="c_name"></result>
+        </association>
+    </resultMap>
+</mapper>

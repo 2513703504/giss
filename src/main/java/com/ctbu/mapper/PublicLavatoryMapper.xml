@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--mapper命名空间，必须配置属性，已存在Mapper接口的全类名-->
+<mapper namespace="com.ctbu.mapper.PublicLavatoryMapper">
+    <!--显示所有公共厕所 地图展示-->
+    <select id="getAllPl" resultMap="getPl">
+       select * from public_lavatory
+    </select>
+
+    <!--显示所有公共厕所 表展示-->
+    <select id="getPlByPage" resultMap="getPl">
+        select * from public_lavatory
+    </select>
+
+    <!-- 按条件查询公共厕所 -->
+    <select id="getPlByCondition" resultMap="getPl">
+        select * from public_lavatory
+        <where>
+            <if test="plAddress!=null">
+               and pl_address like concat("%",#{plAddress},"%")
+            </if>
+        </where>
+    </select>
+
+    <select id="getPlDetail" resultMap="plDetail">
+        SELECT * FROM
+            (SELECT temp.pl_id,temp.worker_id,temp.w_name,temp.w_id_number,temp.w_age,temp.w_address,company.c_name from
+                (SELECT * from pl_worker LEFT JOIN worker on pl_worker.worker_id=worker.id) as
+                    temp LEFT JOIN  company on temp.company_id=company.id) as temp2 RIGHT JOIN public_lavatory pl on pl.id=temp2.pl_id
+                        WHERE pl.id=#{id}
+    </select>
+
+    <delete id="deleteOnePl">
+        delete from public_lavatory where id=#{id}
+    </delete>
+
+    <insert id="insertPl">
+        insert into public_lavatory(pl_name,pl_address,pl_area,lng,lat) values (#{plName},#{plAddress},#{plArea},#{lng},#{lat})
+    </insert>
+    <resultMap id="getPl" type="PublicLavatory" autoMapping="true">
+        <id property="id" column="id"></id>
+        <result property="plName" column="pl_name"></result>
+        <result property="plAddress" column="pl_address"></result>
+        <result property="plArea" column="pl_area"></result>
+        <result property="lng" column="lng"></result>
+        <result property="lat" column="lat"></result>
+    </resultMap>
+
+    <resultMap id="plDetail" type="PublicLavatory" autoMapping="true">
+        <id property="id" column="id"></id>
+        <result property="plName" column="pl_name"></result>
+        <result property="plAddress" column="pl_address"></result>
+        <result property="plArea" column="pl_area"></result>
+        <collection property="workers" ofType="Worker" autoMapping="true">
+            <result property="id" column="worker_id"></result>
+            <result property="workerName" column="w_name"></result>
+            <result property="idNumber" column="w_id_number"></result>
+            <result property="age" column="w_age"></result>
+            <result property="address" column="w_address"></result>
+            <association property="company" javaType="Company" autoMapping="true">
+                <result property="companyName" column="c_name"></result>
+            </association>
+        </collection>
+
+    </resultMap>
+</mapper>

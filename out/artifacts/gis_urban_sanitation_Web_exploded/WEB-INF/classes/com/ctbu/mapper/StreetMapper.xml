@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--mapper命名空间，必须配置属性，已存在Mapper接口的全类名-->
+<mapper namespace="com.ctbu.mapper.StreetMapper">
+    <!--显示所有街道-->
+    <select id="getAllStreet" resultMap="allStreet">
+        select * from street
+    </select>
+
+    <select id="getStreetByPage" resultMap="allStreet">
+        select * from street
+    </select>
+
+    <select id="getStreetByCondition" resultMap="allStreet">
+        select * from street
+        <where>
+            <if test="streetName!=null">
+                and st_name like concat("%",#{streetName},"%")
+            </if>
+            <if test="streetAddress!=null">
+                and st_address like concat("%",#{streetAddress},"%")
+            </if>
+        </where>
+    </select>
+    <select id="getStreetDetail" resultMap="streetDetail">
+        select * FROM (select sc.id sc_id,sc.sc_number,sc.sct_id,street.id st_id,street.st_name,street.st_address FROM sanitation_car sc INNER JOIN street on sc.st_id=street.id)
+            as temp LEFT JOIN sanitation_car_type on temp.sct_id=sanitation_car_type.id where st_id=#{id}
+    </select>
+    <resultMap id="allStreet" type="Street" autoMapping="true">
+        <id property="id" column="id"></id>
+        <result property="streetName" column="st_name"></result>
+        <result property="streetAddress" column="st_address"></result>
+    </resultMap>
+
+    <resultMap id="streetDetail" type="Street" autoMapping="true">
+        <id property="id" column="st_id"></id>
+        <result property="streetName" column="st_name"></result>
+        <result property="streetAddress" column="st_address"></result>
+        <collection property="cars" ofType="SanitationCar" autoMapping="true">
+            <result property="id" column="sc_id"></result>
+            <result property="scNumber" column="sc_number"></result>
+            <result property="scType" column="sct_name"></result>
+        </collection>
+        <collection property="bins" ofType="Bin" autoMapping="true" select="getBin" column="id">
+        </collection>
+    </resultMap>
+
+    <select id="getBin" resultType="Bin">
+        select bin_number binNumber from bin LEFT JOIN street on bin.st_id=street.id WHERE street.id=#{id}
+    </select>
+
+
+</mapper>

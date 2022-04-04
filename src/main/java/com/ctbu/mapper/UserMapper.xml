@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--mapper命名空间，必须配置属性，已存在Mapper接口的全类名-->
+<mapper namespace="com.ctbu.mapper.UserMapper">
+    <!--登录查询-->
+    <select id="login" resultType="User">
+        select id,user_name name,password,authority from user where user_name=#{name} and password=#{password}
+    </select>
+    <select id="getUserList" resultType="User">
+        select id,user_name name,password from user
+    </select>
+</mapper>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <!--开启注解扫描-->
+    <context:component-scan base-package="com.ctbu"></context:component-scan>
+
+    <!--引入数据库资源文件-->
+    <context:property-placeholder location="classpath:database.properties"></context:property-placeholder>
+
+    <!--配置数据库连接对象-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="${driver}"></property>
+        <property name="url" value="${url}"></property>
+        <property name="username" value="${uname}"></property>
+        <property name="password" value="${password}"></property>
+<!--        <property name="filters" value="${filters}"></property>-->
+<!--        <property name="initialSize" value="${initialSize}"></property>-->
+<!--        <property name="maxActive" value="${maxActive}"></property>-->
+<!--        <property name="maxWait" value="${maxWait}"></property>-->
+<!--        <property name="timeBetweenEvictionRunsMillis" value="${timeBetweenEvictionRunsMillis}"></property>-->
+<!--        <property name="minEvictableIdleTimeMillis" value="${minEvictableIdleTimeMillis}"></property>-->
+<!--        <property name="validationQuery" value="${validationQuery}"></property>-->
+<!--        <property name="testWhileIdle" value="${testWhileIdle}"></property>-->
+<!--        <property name="testOnBorrow" value="${testOnBorrow}"></property>-->
+<!--        <property name="testOnReturn" value="${testOnReturn}"></property>-->
+<!--        <property name="poolPreparedStatements" value="${poolPreparedStatements}"></property>-->
+<!--        <property name="maxPoolPreparedStatementPerConnectionSize" value="${maxPoolPreparedStatementPerConnectionSize}"></property>-->
+    </bean>
+
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="configLocation" value="classpath:mybatis_config.xml"></property>
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
+    <!--基于mapper接口开发，需要配置扫描所有mapper接口生成代理对象-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.ctbu.mapper"></property>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+    </bean>
+
+    <!--配置事务管理对象-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"></property>
+
+    </bean>
+
+    <!--开启注解事务的开发-->
+    <tx:annotation-driven transaction-manager="transactionManager"></tx:annotation-driven>
+
+    <!--使用AOP进行事务管理-->
+    <!--把事务管理配置成通知-->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <!--事务的传播特性和隔离级别-->
+        <tx:attributes>
+            <!--isolation :隔离级别 脏读 不可重复读 （MySQL默认）可重复度 串行化  默认使用数据库的隔离界别-->
+            <!--propagation: 传播特性 -->
+            <!--required 开始事务的处理-->
+            <!--supports 有事务开启事务的处理，没有不使用事务处理-->
+            <!-- not_supported 有事务也会挂起不用-->
+            <tx:method name="update*" isolation="DEFAULT" propagation="REQUIRED"/>
+            <tx:method name="delete*" isolation="DEFAULT" propagation="REQUIRED"/>
+            <tx:method name="insert*" isolation="DEFAULT" propagation="REQUIRED"/>
+            <tx:method name="get*" isolation="DEFAULT" propagation="REQUIRED"/>
+            <tx:method name="add*" isolation="DEFAULT" propagation="REQUIRED"/>
+            <tx:method name="select*" isolation="DEFAULT" propagation="NOT_SUPPORTED"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <!--使用aop把事务的通知应用到service层-->
+    <aop:config>
+        <aop:pointcut id="pc" expression="execution(* com.ctbu.service.*.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="pc"></aop:advisor>
+    </aop:config>
+    <import resource="springmvc.xml"></import>
+</beans>

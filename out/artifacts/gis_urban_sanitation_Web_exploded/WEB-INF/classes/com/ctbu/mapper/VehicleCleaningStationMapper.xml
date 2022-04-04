@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--mapper命名空间，必须配置属性，已存在Mapper接口的全类名-->
+<mapper namespace="com.ctbu.mapper.VehicleCleaningStationMapper">
+    <!--登录查询-->
+    <select id="getAllVcs" resultMap="allVcs">
+        select * from vehicle_cleaning_station
+    </select>
+    <resultMap id="allVcs" type="VehicleCleaningStation" autoMapping="true">
+        <id column="id" property="id"></id>
+        <result property="vcsName" column="vcs_name"></result>
+        <result property="vcsAddress" column="vcs_address"></result>
+        <result property="vcsArea" column="vcs_area"></result>
+        <result property="lng" column="lng"></result>
+        <result property="lat" column="lat"></result>
+    </resultMap>
+</mapper>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--mapper命名空间，必须配置属性，已存在Mapper接口的全类名-->
+<mapper namespace="com.ctbu.mapper.LandfillMapper">
+    <!--显示所有垃圾填埋场-->
+    <select id="getAllLandfills" resultMap="landfill">
+        select *  from landfills
+    </select>
+    <select id="getLandfillDetail" resultMap="landfillDetail">
+        select * from (select sc.id sc_id,sc.sc_number,landfill.id id,landfill.landfills_name,landfill.landfills_address,landfill.landfills_area,landfill.lng,landfill.lat from sanitation_car sc INNER JOIN landfills landfill on sc.lf_id=landfill.id) as temp where  temp.id=#{id}
+    </select>
+    <resultMap id="landfill" type="Landfill" autoMapping="true">
+        <id property="id" column="id"></id>
+        <result property="landfillName" column="landfills_name"></result>
+        <result property="landfillAddress" column="landfills_address"></result>
+        <result property="landfillArea" column="landfills_area"></result>
+        <result property="lng" column="lng"></result>
+        <result property="lat" column="lat"></result>
+    </resultMap>
+
+    <resultMap id="landfillDetail" type="Landfill">
+        <result property="landfillName" column="landfills_name"></result>
+        <result property="landfillAddress" column="landfills_address"></result>
+        <result property="landfillArea" column="landfills_area"></result>
+        <result property="lng" column="lng"></result>
+        <result property="lat" column="lat"></result>
+        <collection property="cars" ofType="SanitationCar" autoMapping="true">
+            <result property="id" column="sc_id"></result>
+            <result property="scNumber" column="sc_number"></result>
+        </collection>
+    </resultMap>
+</mapper>

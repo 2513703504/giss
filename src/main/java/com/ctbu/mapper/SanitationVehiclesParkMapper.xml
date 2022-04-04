@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--mapper命名空间，必须配置属性，已存在Mapper接口的全类名-->
+<mapper namespace="com.ctbu.mapper.SanitationVehiclesParkMapper">
+    <!--显示所有环卫停车厂-->
+    <select id="getAllSvp" resultMap="svp">
+       select * from sanitation_vehicles_park
+    </select>
+
+    <select id="getSvpByPage" resultMap="svp">
+        select * from sanitation_vehicles_park
+    </select>
+
+    <select id="getSvpByCondition" resultMap="svp">
+        select * from sanitation_vehicles_park
+        <where>
+            <if test="svpName!=null">
+                and svp_name like concat("%",#{svpName},"%")
+            </if>
+            <if test="svpAddress!=null">
+                and svp_address like concat("%",#{svpAddress},"%")
+            </if>
+        </where>
+    </select>
+
+    <insert id="addSvp">
+        insert into sanitation_vehicles_park(svp_name,svp_address,svp_area,lng,lat) values(#{svpName},#{svpAddress},#{svpArea},#{lng},#{lat})
+    </insert>
+
+    <delete id="deleteSvp">
+        delete from sanitation_vehicles_park where id=#{id}
+    </delete>
+    <resultMap id="svp" type="SanitationVehiclesPark" autoMapping="true">
+        <id property="id" column="id"></id>
+        <result property="svpName" column="svp_name"></result>
+        <result property="svpAddress" column="svp_address"></result>
+        <result property="svpArea" column="svp_area"></result>
+        <result property="lng" column="lng"></result>
+        <result property="lat" column="lat"></result>
+    </resultMap>
+</mapper>

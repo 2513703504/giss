@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--mapper命名空间，必须配置属性，已存在Mapper接口的全类名-->
+<mapper namespace="com.ctbu.mapper.RubbishTransferStationMapper">
+    <!--显示所有垃圾转运站-->
+    <select id="getAllRts" resultMap="rts">
+       select * from rubbish_transfer_station
+    </select>
+
+    <select id="getRtsByPage" resultMap="rts">
+       select * from rubbish_transfer_station
+    </select>
+
+    <select id="getRtsByCondition" resultMap="rts">
+        select * from rubbish_transfer_station 
+        <where>
+         <if test="rtsName!=null">
+             and rts_name like concat("%",#{rtsName},"%")
+         </if>
+         <if test="rtsAddress!=null">
+             and rts_address like concat("%",#{rtsAddress},"%")
+         </if>
+        </where>
+    </select>
+
+    <select id="getRtsDetail" resultMap="rtsDetail">
+        select * from (select temp2.worker_id,temp2.w_name,temp2.w_id_number,temp2.w_address,temp2.c_name,temp2.w_age,sc.id sc_id,sc.sc_number,sc.rts_id,sc.sct_id FROM (select temp.worker_id,temp.rts_id,temp.w_name,temp.w_id_number,temp.w_address,temp.w_age,company.c_name
+                FROM (select * from worker_rts left join worker on worker_rts.worker_id=worker.id) as temp left join company on temp.company_id=company.id)
+                    as temp2 INNER join sanitation_car sc on temp2.rts_id=sc.rts_id) as temp3,sanitation_car_type,rubbish_transfer_station
+                        where temp3.sct_id=sanitation_car_type.id and temp3.rts_id=rubbish_transfer_station.id and temp3.rts_id=#{id}
+    </select>
+
+    <insert id="addRts">
+        insert into rubbish_transfer_station(rts_name,rts_address,rts_area,lng,lat) values (#{rtsName},#{rtsAddress},#{rtsArea},#{lng},#{lat})
+    </insert>
+
+    <delete id="deleteRts">
+        delete from rubbish_transfer_station where id=#{id}
+    </delete>
+
+    <resultMap id="rts" type="RubbishTransferStation" autoMapping="true">
+        <id property="id" column="id"></id>
+        <result property="rtsName" column="rts_name"></result>
+        <result property="rtsAddress" column="rts_address"></result>
+        <result property="rtsArea" column="rts_area"></result>
+        <result property="lng" column="lng"></result>
+        <result property="lat" column="lat"></result>
+    </resultMap>
+
+    <resultMap id="rtsDetail" type="RubbishTransferStation" autoMapping="true">
+        <id property="id" column="id"></id>
+        <result property="rtsName" column="rts_name"></result>
+        <result property="rtsAddress" column="rts_address"></result>
+        <result property="rtsArea" column="rts_area"></result>
+        <result property="lng" column="lng"></result>
+        <result property="lat" column="lat"></result>
+
+        <collection property="sanitationCars" ofType="SanitationCar" autoMapping="true">
+            <result property="id" column="sc_id"></result>
+            <result property="scNumber" column="sc_number"></result>
+            <result property="scType" column="sct_name"></result>
+        </collection>
+
+        <collection property="workers" ofType="Worker" autoMapping="true">
+            <result property="id" column="worker_id"></result>
+            <result property="workerName" column="w_name"></result>
+            <result property="idNumber" column="w_id_number"></result>
+            <result property="age" column="w_age"></result>
+            <result property="address" column="w_address"></result>
+            <association property="company" javaType="Company" autoMapping="true">
+                <result property="companyName" column="c_name"></result>
+            </association>
+        </collection>
+    </resultMap>
+</mapper>

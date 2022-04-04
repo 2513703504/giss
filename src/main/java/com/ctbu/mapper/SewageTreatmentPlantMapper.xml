@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--mapper命名空间，必须配置属性，已存在Mapper接口的全类名-->
+<mapper namespace="com.ctbu.mapper.SewageTreatmentPlantMapper">
+    <!--显示所有污水处理厂-->
+    <select id="getAllStp" resultMap="allStp">
+        select * from sewage_treatment_plant
+    </select>
+
+    <select id="getStpDetail" resultMap="stpDetail">
+        select * from (select sc.id sc_id,sc.sc_number,stp.id id,stp.stp_name,stp.stp_address,stp.stp_area,stp.lng,stp.lat from sanitation_car sc INNER JOIN sewage_treatment_plant stp on
+	sc.stp_id=stp.id) as temp where temp.id=#{id}
+    </select>
+
+
+    <resultMap id="allStp" type="SewageTreatmentPlant" autoMapping="true">
+        <id column="id" property="id"></id>
+        <result property="stpName" column="stp_name"></result>
+        <result property="stpAddress" column="stp_address"></result>
+        <result property="stpArea" column="stp_area"></result>
+        <result property="lng" column="lng"></result>
+        <result property="lat" column="lat"></result>
+    </resultMap>
+
+    <resultMap id="stpDetail" type="SewageTreatmentPlant" autoMapping="true">
+        <id column="id" property="id"></id>
+        <result property="stpName" column="stp_name"></result>
+        <result property="stpAddress" column="stp_address"></result>
+        <result property="stpArea" column="stp_area"></result>
+        <result property="lng" column="lng"></result>
+        <result property="lat" column="lat"></result>
+        <collection property="cars" ofType="SanitationCar" autoMapping="true">
+            <result property="id" column="sc_id"></result>
+            <result property="scNumber" column="sc_number"></result>
+        </collection>
+    </resultMap>
+</mapper>
