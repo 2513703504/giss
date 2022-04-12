@@ -4,9 +4,8 @@ import com.ctbu.entity.Company;
 import com.ctbu.service.CompanyService;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-
-import javax.print.DocFlavor;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -19,21 +18,20 @@ import java.util.Map;
  * @updateTime : 2022/3/20 9:49
  * @updateRemark : [说明本次修改内容]
  */
-@RestController
+@Controller
 @CrossOrigin
+@ResponseBody
 public class CompanyController {
 
     @Autowired
     private CompanyService companyService;
 
     @RequestMapping("/listCompany")
-    @ResponseBody
     public List<Company> getAllCompany(){
         return companyService.getAllCompanyService();
     }
 
     @RequestMapping("/listCompanyByPage")
-    @ResponseBody
     public Map<Object,Object> getCompanyByPage(int currPage){
         Map<Object,Object> map=new HashMap<Object, Object>();
 
@@ -50,7 +48,6 @@ public class CompanyController {
     }
 
     @RequestMapping("/listCompanyByCondition")
-    @ResponseBody
     public Map<Object,Object> getCompanyByCondition(String companyName,String companyAddress){
 
         Map<Object,Object> map=new HashMap<Object, Object>();
@@ -68,7 +65,6 @@ public class CompanyController {
     }
 
     @RequestMapping("/insertCompany")
-    @ResponseBody
     public Map<Object,Object> addCompany(@RequestBody Map<String,Object> map){
         Map<Object,Object> map1=new HashMap<Object, Object>();
         Company company=new Company();
@@ -89,7 +85,6 @@ public class CompanyController {
     }
 
     @RequestMapping("/deleteCompany")
-    @ResponseBody
     public Map<Object,Object> deleteCompany(int id){
         Map<Object,Object> map1=new HashMap<Object, Object>();
         int row=companyService.deleteCompanyService(id);
@@ -102,7 +97,6 @@ public class CompanyController {
     }
 
     @RequestMapping("/updateCompany")
-    @ResponseBody
     public Map<Object,Object> updateCompany(@RequestBody Map<String,Object> map){
         Map<Object,Object> map1=new HashMap<Object, Object>();
         Company company=new Company();
