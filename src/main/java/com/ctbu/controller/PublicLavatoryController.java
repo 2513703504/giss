@@ -22,6 +22,7 @@ import java.util.Map;
 @CrossOrigin
 public class PublicLavatoryController {
 
+
     @Autowired
     private PublicLavatoryService publicLavatoryService;
 
