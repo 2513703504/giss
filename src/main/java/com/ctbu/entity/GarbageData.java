@@ -12,22 +12,22 @@ import java.util.List;
  */
 public class GarbageData {
 
-    private List<Integer> numbers;
-    private List<Integer> years;
+    private Integer number;
+    private Integer year;
 
-    public List<Integer> getNumbers() {
-        return numbers;
+    public Integer getNumber() {
+        return number;
     }
 
-    public void setNumbers(List<Integer> numbers) {
-        this.numbers = numbers;
+    public void setNumber(Integer number) {
+        this.number = number;
     }
 
-    public List<Integer> getYears() {
-        return years;
+    public Integer getYear() {
+        return year;
     }
 
-    public void setYears(List<Integer> years) {
-        this.years = years;
+    public void setYear(Integer year) {
+        this.year = year;
     }
 }

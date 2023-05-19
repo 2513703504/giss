@@ -28,9 +28,7 @@ public class UserServiceImpl implements UserService {
      * @return
      */
     public User loginService(User user) {
-
         return userMapper.login(user);
-
     }
 
     public List<User> getUserList() {

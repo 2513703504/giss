@@ -6,6 +6,8 @@ import com.ctbu.service.WaterDataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author : TangHao
  * @description :
@@ -20,7 +22,7 @@ public class WaterDataServiceImpl implements WaterDataService {
     @Autowired
     private WaterDataMapper waterDataMapper;
 
-    public WaterData getDataService() {
+    public List<WaterData> getDataService() {
         return waterDataMapper.getData();
     }
 }

@@ -7,6 +7,10 @@
     <select id="login" resultType="User">
         select id,user_name name,password,authority from user where user_name=#{name} and password=#{password}
     </select>
+
+
+
+
     <select id="getUserList" resultType="User">
         select id,user_name name,password from user
     </select>

@@ -2,6 +2,8 @@ package com.ctbu.mapper;
 
 import com.ctbu.entity.WaterData;
 
+import java.util.List;
+
 /**
  * @author : TangHao
  * @description :
@@ -13,5 +15,5 @@ public interface WaterDataMapper {
      * 获取历年污水排放
      * @return
      */
-    WaterData getData();
+    List<WaterData> getData();
 }

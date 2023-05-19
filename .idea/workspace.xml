@@ -27,37 +27,40 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64537167-530c-4d09-92fa-a402e9ff095d" name="Default Changelist" comment="修改注解">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/controller/GarbageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/controller/WaterDataController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/entity/GarbageData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/entity/WaterData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/GarbageDataMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/GarbageDataMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/WaterDataMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/WaterDataMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/service/GarbageDataService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/service/WaterDataService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/service/impl/GarbageDataServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/service/impl/WaterDataServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/utils/DataPredict.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/DataTest.java" afterDir="false" />
+    <list default="true" id="64537167-530c-4d09-92fa-a402e9ff095d" name="Default Changelist" comment="添加数据预测模块">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/classes/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/classes/com/ctbu/controller/CompanyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/classes/com/ctbu/controller/CompanyController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/classes/com/ctbu/controller/DomesticWasteIncineratorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/classes/com/ctbu/controller/DomesticWasteIncineratorController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/classes/com/ctbu/controller/PublicLavatoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/classes/com/ctbu/controller/PublicLavatoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/classes/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/classes/database.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gis_urban_sanitation.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/classes/com/ctbu/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/classes/com/ctbu/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/classes/com/ctbu/mapper/CompanyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/classes/com/ctbu/mapper/CompanyMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/classes/com/ctbu/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/classes/com/ctbu/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/classes/com/ctbu/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/classes/com/ctbu/service/impl/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/log/myweb.log" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/log/myweb.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/controller/DomesticWasteIncineratorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/controller/DomesticWasteIncineratorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/controller/PublicLavatoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/controller/PublicLavatoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/database.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ctbu/controller/CompanyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ctbu/controller/CompanyController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ctbu/controller/DomesticWasteIncineratorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ctbu/controller/DomesticWasteIncineratorController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ctbu/controller/PublicLavatoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ctbu/controller/PublicLavatoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/controller/GarbageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/controller/GarbageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/controller/WaterDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/controller/WaterDataController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/entity/Company.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/entity/GarbageData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/entity/GarbageData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/entity/WaterData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/entity/WaterData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/CompanyMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/CompanyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/CompanyMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/GarbageDataMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/GarbageDataMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/GarbageDataMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/GarbageDataMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/WaterDataMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/WaterDataMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/WaterDataMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/WaterDataMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/service/GarbageDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/service/GarbageDataService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/service/WaterDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/service/WaterDataService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/service/impl/GarbageDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/service/impl/GarbageDataServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/service/impl/WaterDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/service/impl/WaterDataServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/utils/DataPredict.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/utils/DataPredict.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DataTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ctbu/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ctbu/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ctbu/mapper/CompanyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ctbu/mapper/CompanyMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ctbu/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ctbu/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ctbu/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ctbu/service/impl/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/log/myweb.log" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/log/myweb.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,39 +103,37 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.115611814" />
-    <property name="project.structure.side.proportion" value="0.11061947" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.ctbu.entity" />
-      <recent name="com.ctbu.service" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Idea WorkSpace\Oracle\gis_urban_sanitation\web\WEB-INF\jsp" />
+      <recent name="F:\Idea WorkSpace\Oracle\gis_urban_sanitation\web" />
+      <recent name="F:\Idea WorkSpace\Oracle\gis_urban_sanitation\src\main\java\com\ctbu" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Idea WorkSpace\Oracle\gis_urban_sanitation\src\main\java\com\ctbu\mapper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.ctbu.mapper" />
       <recent name="com.ctbu.entity" />
+      <recent name="com.ctbu.mapper" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\Idea WorkSpace\Oracle\gis_urban_sanitation\web\WEB-INF\jsp" />
-      <recent name="F:\Idea WorkSpace\Oracle\gis_urban_sanitation\web" />
-      <recent name="F:\Idea WorkSpace\Oracle\gis_urban_sanitation\src\main\java\com\ctbu" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.ctbu.entity" />
+      <recent name="com.ctbu.service" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -148,7 +149,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DataPredict">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.88">
     <configuration name="DataPredict" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ctbu.utils.DataPredict" />
       <module name="gis_urban_sanitation" />
@@ -158,17 +159,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -213,8 +203,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 9.0.29" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.29" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
-      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+    <configuration name="Tomcat 8.5.88" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.88" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
@@ -252,6 +241,21 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
           <option name="USE_DEFAULT" value="true" />
@@ -364,17 +368,17 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.DataPredict" />
       <item itemvalue="JUnit.UserTest.test4" />
       <item itemvalue="JUnit.DataBaseRandom.randomWorkers" />
       <item itemvalue="JUnit.DataBaseRandom.randomCarNumber" />
-      <item itemvalue="Tomcat Server.Tomcat 9.0.29" />
       <item itemvalue="JUnit.DataTest.test1" />
-      <item itemvalue="Application.DataPredict" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.88" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DataPredict" />
         <item itemvalue="JUnit.DataTest.test1" />
+        <item itemvalue="Application.DataPredict" />
         <item itemvalue="JUnit.DataBaseRandom.randomCarNumber" />
         <item itemvalue="JUnit.DataBaseRandom.randomWorkers" />
         <item itemvalue="JUnit.UserTest.test4" />
@@ -418,7 +422,29 @@
       <workItem from="1649581876789" duration="333000" />
       <workItem from="1649722410321" duration="4001000" />
       <workItem from="1649833760222" duration="4088000" />
-      <workItem from="1649894457084" duration="10577000" />
+      <workItem from="1649894457084" duration="27141000" />
+      <workItem from="1650009555637" duration="673000" />
+      <workItem from="1650285609008" duration="3180000" />
+      <workItem from="1650329502151" duration="9392000" />
+      <workItem from="1650363074294" duration="435000" />
+      <workItem from="1650417661517" duration="5662000" />
+      <workItem from="1650500649544" duration="3173000" />
+      <workItem from="1650590973720" duration="600000" />
+      <workItem from="1650762920619" duration="750000" />
+      <workItem from="1651758155336" duration="2574000" />
+      <workItem from="1652163101844" duration="1148000" />
+      <workItem from="1652259225880" duration="88000" />
+      <workItem from="1652448257614" duration="1096000" />
+      <workItem from="1652490431907" duration="923000" />
+      <workItem from="1652598303194" duration="53000" />
+      <workItem from="1653722924331" duration="147000" />
+      <workItem from="1653728110099" duration="518000" />
+      <workItem from="1654319292552" duration="206000" />
+      <workItem from="1654392433374" duration="268000" />
+      <workItem from="1655799806859" duration="10259000" />
+      <workItem from="1657712086987" duration="390000" />
+      <workItem from="1658927783272" duration="31000" />
+      <workItem from="1684462374611" duration="691000" />
     </task>
     <task id="LOCAL-00001" summary="毕设后端项目第一次提交">
       <created>1649060873787</created>
@@ -434,7 +460,21 @@
       <option name="project" value="LOCAL" />
       <updated>1649731076166</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="添加数据预测模块">
+      <created>1649918141337</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1649918141337</updated>
+    </task>
+    <task id="LOCAL-00004" summary="添加数据预测模块">
+      <created>1649918183615</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1649918183615</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -462,170 +502,12 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="毕设后端项目第一次提交" />
     <MESSAGE value="修改注解" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改注解" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="455" y="177" key="#Log_Highlighting_(ideolog)" timestamp="1647342758877">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="455" y="177" key="#Log_Highlighting_(ideolog)/0.0.1536.816@0.0.1536.816" timestamp="1647342758877" />
-    <state x="249" y="0" key="#Project_Structure" timestamp="1647241857433">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="249" y="0" key="#Project_Structure/0.0.1536.816@0.0.1536.816" timestamp="1647241857433" />
-    <state x="556" y="194" key="#Web_Browsers" timestamp="1647222093126">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="556" y="194" key="#Web_Browsers/0.0.1536.816@0.0.1536.816" timestamp="1647222093126" />
-    <state x="210" y="63" width="1102" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1647909800286">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="210" y="63" width="1102" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.816@0.0.1536.816" timestamp="1647909800286" />
-    <state x="574" y="92" key="#com.intellij.ide.util.MemberChooser" timestamp="1649905246937">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="574" y="92" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1649905246937" />
-    <state x="376" y="331" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1649168792979">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="376" y="331" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.816@0.0.1536.816" timestamp="1649168792979" />
-    <state x="544" y="271" width="448" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1648689588750">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="544" y="271" width="448" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.816@0.0.1536.816" timestamp="1648689588750" />
-    <state x="596" y="96" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1647757402932">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="596" y="96" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.816@0.0.1536.816" timestamp="1647757402932" />
-    <state x="499" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1648987920184">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="499" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.816@0.0.1536.816" timestamp="1648987920184" />
-    <state x="499" y="163" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1647429437757">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="499" y="163" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.816@0.0.1536.816" timestamp="1647429437757" />
-    <state x="93" y="93" width="1350" height="630" key="DiffContextDialog" timestamp="1649747349048">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="93" y="93" width="1350" height="630" key="DiffContextDialog/0.0.1536.816@0.0.1536.816" timestamp="1649747349048" />
-    <state x="535" y="163" width="438" height="452" key="FileChooserDialogImpl" timestamp="1649582219968">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="535" y="163" width="438" height="452" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1649582219968" />
-    <state width="1278" height="59" key="GridCell.Tab.0.bottom" timestamp="1649905648971">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1278" height="59" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1649905648971" />
-    <state width="1278" height="59" key="GridCell.Tab.0.center" timestamp="1649905648971">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1278" height="59" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1649905648971" />
-    <state width="1278" height="59" key="GridCell.Tab.0.left" timestamp="1649905648971">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1278" height="59" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1649905648971" />
-    <state width="1278" height="59" key="GridCell.Tab.0.right" timestamp="1649905648971">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1278" height="59" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1649905648971" />
-    <state width="1278" height="59" key="GridCell.Tab.1.bottom" timestamp="1649905648753">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1278" height="59" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1649905648753" />
-    <state width="1278" height="59" key="GridCell.Tab.1.center" timestamp="1649905648753">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1278" height="59" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1649905648753" />
-    <state width="1278" height="59" key="GridCell.Tab.1.left" timestamp="1649905648753">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1278" height="59" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1649905648753" />
-    <state width="1278" height="59" key="GridCell.Tab.1.right" timestamp="1649905648753">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1278" height="59" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1649905648753" />
-    <state width="1278" height="59" key="GridCell.Tab.2.bottom" timestamp="1649905648753">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1278" height="59" key="GridCell.Tab.2.bottom/0.0.1536.816@0.0.1536.816" timestamp="1649905648753" />
-    <state width="1278" height="59" key="GridCell.Tab.2.center" timestamp="1649905648753">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1278" height="59" key="GridCell.Tab.2.center/0.0.1536.816@0.0.1536.816" timestamp="1649905648753" />
-    <state width="1278" height="59" key="GridCell.Tab.2.left" timestamp="1649905648753">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1278" height="59" key="GridCell.Tab.2.left/0.0.1536.816@0.0.1536.816" timestamp="1649905648753" />
-    <state width="1278" height="59" key="GridCell.Tab.2.right" timestamp="1649905648753">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1278" height="59" key="GridCell.Tab.2.right/0.0.1536.816@0.0.1536.816" timestamp="1649905648753" />
-    <state width="1147" height="537" key="GridCell.Tab.3.bottom" timestamp="1647857459437">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1147" height="537" key="GridCell.Tab.3.bottom/0.0.1536.816@0.0.1536.816" timestamp="1647857459437" />
-    <state width="1147" height="537" key="GridCell.Tab.3.center" timestamp="1647857459437">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1147" height="537" key="GridCell.Tab.3.center/0.0.1536.816@0.0.1536.816" timestamp="1647857459437" />
-    <state width="1147" height="537" key="GridCell.Tab.3.left" timestamp="1647857459437">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1147" height="537" key="GridCell.Tab.3.left/0.0.1536.816@0.0.1536.816" timestamp="1647857459437" />
-    <state width="1147" height="537" key="GridCell.Tab.3.right" timestamp="1647857459437">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1147" height="537" key="GridCell.Tab.3.right/0.0.1536.816@0.0.1536.816" timestamp="1647857459437" />
-    <state width="1147" height="537" key="GridCell.Tab.4.bottom" timestamp="1647857458609">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1147" height="537" key="GridCell.Tab.4.bottom/0.0.1536.816@0.0.1536.816" timestamp="1647857458609" />
-    <state width="1147" height="537" key="GridCell.Tab.4.center" timestamp="1647857458609">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1147" height="537" key="GridCell.Tab.4.center/0.0.1536.816@0.0.1536.816" timestamp="1647857458609" />
-    <state width="1147" height="537" key="GridCell.Tab.4.left" timestamp="1647857458609">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1147" height="537" key="GridCell.Tab.4.left/0.0.1536.816@0.0.1536.816" timestamp="1647857458609" />
-    <state width="1147" height="537" key="GridCell.Tab.4.right" timestamp="1647857458609">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1147" height="537" key="GridCell.Tab.4.right/0.0.1536.816@0.0.1536.816" timestamp="1647857458609" />
-    <state x="299" y="63" key="Maven.ArtifactSearchDialog" timestamp="1647242095746">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="299" y="63" key="Maven.ArtifactSearchDialog/0.0.1536.816@0.0.1536.816" timestamp="1647242095746" />
-    <state x="210" y="37" width="992" height="707" key="SettingsEditor" timestamp="1649582121426">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="210" y="37" width="992" height="707" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1649582121426" />
-    <state x="262" y="176" width="913" height="640" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1647501674375">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="262" y="176" width="913" height="640" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.816@0.0.1536.816" timestamp="1647501674375" />
-    <state x="499" y="168" key="extract.method.dialog" timestamp="1649904406262">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="499" y="168" key="extract.method.dialog/0.0.1536.816@0.0.1536.816" timestamp="1649904406262" />
-    <state x="178" y="69" key="new project wizard" timestamp="1649582209043">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="178" y="69" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1649582209043" />
-    <state x="425" y="185" key="run.anything.popup" timestamp="1647909270808">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="425" y="185" key="run.anything.popup/0.0.1536.816@0.0.1536.816" timestamp="1647909270808" />
-    <state x="435" y="137" width="672" height="678" key="search.everywhere.popup" timestamp="1647845218351">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="435" y="137" width="672" height="678" key="search.everywhere.popup/0.0.1536.816@0.0.1536.816" timestamp="1647845218351" />
+    <MESSAGE value="添加数据预测模块" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加数据预测模块" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

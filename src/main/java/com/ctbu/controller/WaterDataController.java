@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -24,6 +25,7 @@ import java.util.Map;
 @Controller
 @ResponseBody
 @CrossOrigin
+@SuppressWarnings("all")
 public class WaterDataController {
 
     @Autowired
@@ -33,12 +35,15 @@ public class WaterDataController {
     public Map<Object,Object> getWaterData(){
         Map<Object,Object> map=new HashMap<Object, Object>();
 
-        WaterData waterData=waterDataService.getDataService();
-        System.out.println(waterData);
-        List<Integer> numbers=waterData.getNumber();
+        List<WaterData> waterDatas=waterDataService.getDataService();
+        List<Integer> numbers=new ArrayList<Integer>();
 
-        List<Integer> years=waterData.getYear();
+        List<Integer> years=new ArrayList<Integer>();
 
+        for (WaterData wd: waterDatas) {
+            numbers.add(wd.getNumber());
+            years.add(wd.getYear());
+        }
         int[] predictResult = DataPredict.predict(numbers,years);
 
         numbers.add(predictResult[0]);

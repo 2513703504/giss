@@ -12,14 +12,14 @@ public class DataTest {
 
     @Test
     public void test1(){
-        int[] year={200,225,224,256,281,335,349,399,410,438,466,494};
-        int[] number={2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018};
+        int[] year={52379,57562,61830,64622,69142,76782,82991,93517,100265};
+        int[] number={2007,2008,2009,2010,2011,2012,2013,2014,2015};
 
         double m=0;
         double n=0;
         double x=0;
         double y=0;
-
+        int length= year.length;
         for (int i = 0; i < number.length; i++) {
             m += number[i]*year[i];
             x += number[i];
@@ -33,13 +33,13 @@ public class DataTest {
         System.out.println(n);
 
 
-        double b=(12*m-(x*y))/((12*n)-x*x);
-        double a=(y-b*x)/12;
+        double b=(length*m-(x*y))/((length*n)-x*x);
+        double a=(y-b*x)/length;
 
         System.out.println(a);
         System.out.println(b);
 
-        double next=a+b*2019;
+        double next=a+b*2016;
         System.out.println(next);
     }
 }

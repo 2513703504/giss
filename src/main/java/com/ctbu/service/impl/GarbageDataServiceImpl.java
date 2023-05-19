@@ -6,6 +6,8 @@ import com.ctbu.service.GarbageDataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author : TangHao
  * @description :
@@ -24,7 +26,7 @@ public class GarbageDataServiceImpl implements GarbageDataService {
      *
      * @return
      */
-    public GarbageData getDataService() {
+    public List<GarbageData> getDataService() {
         return garbageDataMapper.getData();
     }
 }

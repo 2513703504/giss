@@ -2,6 +2,8 @@ package com.ctbu.mapper;
 
 import com.ctbu.entity.GarbageData;
 
+import java.util.List;
+
 /**
  * @author : TangHao
  * @description :
@@ -13,5 +15,5 @@ public interface GarbageDataMapper {
      * 获取数据
      * @return
      */
-    GarbageData getData();
+    List<GarbageData> getData();
 }

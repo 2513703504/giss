@@ -5,13 +5,8 @@
     <select id="getData" resultMap="waterData">
         select * from sewage_data
     </select>
-
     <resultMap id="waterData" type="WaterData">
-        <collection property="numbers"  ofType="Integer" autoMapping="true">
-            <result column="sd_mount"></result>
-        </collection>
-        <collection property="years"  ofType="Integer" autoMapping="true">
-            <result column="sd_time"></result>
-        </collection>
+        <result column="sd_mount" property="number"></result>
+        <result column="sd_time" property="year"></result>
     </resultMap>
 </mapper>

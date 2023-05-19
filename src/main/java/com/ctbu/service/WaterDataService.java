@@ -2,6 +2,8 @@ package com.ctbu.service;
 
 import com.ctbu.entity.WaterData;
 
+import java.util.List;
+
 /**
  * @author : TangHao
  * @description :
@@ -10,8 +12,8 @@ import com.ctbu.entity.WaterData;
  */
 public interface WaterDataService {
     /**
-     *
+     * 所有数据
      * @return
      */
-    WaterData getDataService();
+    List<WaterData> getDataService();
 }

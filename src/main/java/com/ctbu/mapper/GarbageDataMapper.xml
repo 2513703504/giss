@@ -3,15 +3,12 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ctbu.mapper.GarbageDataMapper">
     <select id="getData" resultMap="garbageData">
-        select * from garbage_data
+        select * FROM garbage_data
     </select>
 
-    <resultMap id="garbageData" type="GarbageData">
-        <collection property="numbers"  ofType="Integer" autoMapping="true">
-            <result column="gd_mount"></result>
-        </collection>
-        <collection property="years"  ofType="Integer" autoMapping="true">
-            <result column="gd_time"></result>
-        </collection>
+    <resultMap id="garbageData" type="GarbageData" autoMapping="true">
+        <result column="gd_mount" property="number"></result>
+        <result column="gd_time" property="year"></result>
     </resultMap>
+
 </mapper>

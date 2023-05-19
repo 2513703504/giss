@@ -4,7 +4,6 @@
 <!--mapper命名空间，必须配置属性，已存在Mapper接口的全类名-->
 <mapper namespace="com.ctbu.mapper.CompanyMapper">
     <!--显示所有环卫公司-->
-    <!--显示所有环卫公司-->
     <select id="getAllCompany" resultMap="c1">
         select * from company
     </select>

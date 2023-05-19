@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,6 +24,7 @@ import java.util.Map;
  */
 @CrossOrigin
 @Controller
+@ResponseBody
 @SuppressWarnings("all")
 public class GarbageController {
 
@@ -32,12 +35,16 @@ public class GarbageController {
     public Map<Object,Object> getGarbageData(){
         Map<Object,Object> map=new HashMap<Object, Object>();
 
-        GarbageData garbageData=garbageDataService.getDataService();
+        List<GarbageData> garbageDatas=garbageDataService.getDataService();
 
-        List<Integer> numbers=garbageData.getNumbers();
 
-        List<Integer> years=garbageData.getYears();
+        List<Integer> numbers=new ArrayList<Integer>();
 
+        List<Integer> years=new ArrayList<Integer>();
+        for (GarbageData gd :garbageDatas) {
+            numbers.add(gd.getNumber());
+            years.add(gd.getYear());
+        }
         int[] predictResult = DataPredict.predict(numbers,years);
 
         numbers.add(predictResult[0]);

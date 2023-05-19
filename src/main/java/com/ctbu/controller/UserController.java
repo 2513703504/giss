@@ -3,10 +3,10 @@ package com.ctbu.controller;
 import com.ctbu.entity.User;
 import com.ctbu.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
 import java.util.List;
@@ -20,7 +20,7 @@ import java.util.Map;
  * @updateTime : 2022/3/14 15:00
  * @updateRemark : [说明本次修改内容]
  */
-@RestController
+@Controller
 @CrossOrigin
 public class UserController {
 

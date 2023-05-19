@@ -12,22 +12,22 @@ import java.util.List;
  */
 public class WaterData {
 
-    private List<Integer> numbers;
-    private List<Integer> years;
+    private Integer number;
+    private Integer year;
 
-    public List<Integer> getNumber() {
-        return numbers;
+    public Integer getNumber() {
+        return number;
     }
 
-    public void setNumber(List<Integer> number) {
-        this.numbers = number;
+    public void setNumber(Integer number) {
+        this.number = number;
     }
 
-    public List<Integer> getYear() {
-        return years;
+    public Integer getYear() {
+        return year;
     }
 
-    public void setYear(List<Integer> year) {
-        this.years = year;
+    public void setYear(Integer year) {
+        this.year = year;
     }
 }
