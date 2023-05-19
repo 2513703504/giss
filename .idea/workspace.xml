@@ -27,42 +27,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64537167-530c-4d09-92fa-a402e9ff095d" name="Default Changelist" comment="添加数据预测模块">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gis_urban_sanitation.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/classes/com/ctbu/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/classes/com/ctbu/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/classes/com/ctbu/mapper/CompanyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/classes/com/ctbu/mapper/CompanyMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/classes/com/ctbu/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/classes/com/ctbu/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/classes/com/ctbu/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/classes/com/ctbu/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/log/myweb.log" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gis_urban_sanitation_Web_exploded/WEB-INF/log/myweb.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/controller/GarbageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/controller/GarbageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/controller/WaterDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/controller/WaterDataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/entity/Company.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/entity/GarbageData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/entity/GarbageData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/entity/WaterData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/entity/WaterData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/CompanyMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/CompanyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/CompanyMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/GarbageDataMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/GarbageDataMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/GarbageDataMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/GarbageDataMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/WaterDataMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/WaterDataMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/WaterDataMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/mapper/WaterDataMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/service/GarbageDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/service/GarbageDataService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/service/WaterDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/service/WaterDataService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/service/impl/GarbageDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/service/impl/GarbageDataServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/service/impl/WaterDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/service/impl/WaterDataServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ctbu/utils/DataPredict.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ctbu/utils/DataPredict.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DataTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ctbu/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ctbu/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ctbu/mapper/CompanyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ctbu/mapper/CompanyMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ctbu/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ctbu/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ctbu/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ctbu/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/log/myweb.log" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/log/myweb.log" afterDir="false" />
-    </list>
+    <list default="true" id="64537167-530c-4d09-92fa-a402e9ff095d" name="Default Changelist" comment="最后一次提交" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -444,7 +409,7 @@
       <workItem from="1655799806859" duration="10259000" />
       <workItem from="1657712086987" duration="390000" />
       <workItem from="1658927783272" duration="31000" />
-      <workItem from="1684462374611" duration="691000" />
+      <workItem from="1684462374611" duration="1123000" />
     </task>
     <task id="LOCAL-00001" summary="毕设后端项目第一次提交">
       <created>1649060873787</created>
@@ -474,7 +439,21 @@
       <option name="project" value="LOCAL" />
       <updated>1649918183615</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="最后一次提交">
+      <created>1684463463819</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684463463819</updated>
+    </task>
+    <task id="LOCAL-00006" summary="最后一次提交">
+      <created>1684463477852</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1684463477852</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,7 +486,8 @@
     <MESSAGE value="毕设后端项目第一次提交" />
     <MESSAGE value="修改注解" />
     <MESSAGE value="添加数据预测模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加数据预测模块" />
+    <MESSAGE value="最后一次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="最后一次提交" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
